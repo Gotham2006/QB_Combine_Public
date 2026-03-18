@@ -1,2 +1,8 @@
 # CMSE202_Sports4
-Can computational methods be used to identify the best (fantasy or real life) football draft pick based on the needs of the team?
+What are the most important factors influencing the draft choices of the top drafting teams in this years NFL draft?
+
+Connor G
+Lucas E
+Joseph M
+Gautham
+Ishan
