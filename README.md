@@ -7,11 +7,7 @@ I parsed through a 120 records to find QB's that had significant enough playing 
 Dataset\
 The dataset used is in the QB_Combine_Data.csv.
 
-<<<<<<< HEAD
 To run 
 For the Plot Generator, you can run QB_Plot_Generator.py and for the ML Models summaries you can run the QB_ML_Model.ipynb. The results for QB_ML_Model.ipynb shows up in the output terminal well the images for the Plot Generator are stored as pngs in the folder. 
-=======
-To run\
-For the Plot Generator, you can run QB_Plot_Generator.py and for the OLS Regression Model Summary you can run the QB_ML_Model.ipynb. The results for QB_ML_Model.ipynb shows up in the output terminal well the images are stored as pngs in the folder. 
->>>>>>> a4ff2a0938f1791b1d07c11352946c505ff815b3
+
 
