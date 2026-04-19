@@ -8,5 +8,5 @@ Dataset
 The dataset used is in the QB_Combine_Data.csv.
 
 To run 
-For the Plot Generator, you can run QB_Plot_Generator.py and for the OLS Regression Model Summary you can run the QB_ML_Model.ipynb. The results for QB_ML_Model.ipynb shows up in the output terminal well the images are stored as pngs in the folder. 
+For the Plot Generator, you can run QB_Plot_Generator.py and for the ML Models summaries you can run the QB_ML_Model.ipynb. The results for QB_ML_Model.ipynb shows up in the output terminal well the images for the Plot Generator are stored as pngs in the folder. 
 
