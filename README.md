@@ -2,7 +2,7 @@
 Question How do combine metrics correlate to NFL Production for different positions?
 
 Gautham Dineshkumar
-I parsed through a 120 records to find QB's that had significant enough playing time to consider their PFF scores and then manually inserted all these values and cleaned the data. The folder called QB Combine contains all the parts that I did.
+I parsed through a 120 records to find QB's that had significant enough playing time to consider their PFF scores and then manually inserted all these values and cleaned the data. The folder called QB Combine contains all the code that I did. I also did my part of the report and slides titled QB.
 
 Dataset
 The dataset used is in the QB_Combine_Data.csv.
