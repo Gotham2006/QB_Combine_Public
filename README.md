@@ -8,7 +8,7 @@ The dataset used is in the QB_Combine_Data.csv.
 
 For the Plot Generator, you can run QB_Plot_Generator.py and for the ML Models summaries you can run the QB_ML_Model.ipynb. The results for QB_ML_Model.ipynb shows up in the output terminal and the images for the Plot Generator are stored as pngs in the folder. 
 
-I also stopped using a branch as my JupyterHub crashed multiple times when I tried to merge my branch with main.
+I also stopped using a branch as my local Anaconda jupyterhub crashed multiple times when trying to go to a branch.
 
                                     --Joseph Maleckas--
 
