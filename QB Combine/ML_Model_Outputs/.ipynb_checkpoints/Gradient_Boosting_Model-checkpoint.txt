@@ -1,0 +1,9 @@
+Gradient Boosting CV Accuracy: 0.7071428571428571Std Dev:, 0.15344679327814884Random Forest Feature Importance (Sorted)
+
+40 Yd         0.353915
+Weight        0.250663
+Broad_Jump    0.188450
+3-Cone        0.070090
+Vertical      0.067467
+Shuttle       0.037926
+Height        0.031488

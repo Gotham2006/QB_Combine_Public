@@ -1,0 +1,2 @@
+Cross Validation Accuracy: 0.6607142857142857
+Std Dev: 0.2798505432022819

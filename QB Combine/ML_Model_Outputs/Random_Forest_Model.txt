@@ -1,0 +1,9 @@
+Random Forest Feature Importance (Sorted)
+
+40 Yd         0.254900
+Broad_Jump    0.179246
+Vertical      0.139310
+Weight        0.132247
+3-Cone        0.113299
+Height        0.092138
+Shuttle       0.088860
