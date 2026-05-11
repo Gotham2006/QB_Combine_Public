@@ -1,6 +1,6 @@
 # Predicting NFL QB Success: Machine Learning Insights from Combine Data (2016–2021)
 
-![Combine Picture](QB%20Combine/Plots/NFL_Scouting_Combine_logo.png)
+![Combine Picture](QB%20Combine/Plots/NFL_Scouting_Combine_logo.jpg)
 
 I initally started this project for my CMSE 202 class at Michigan State University. I wanted to combine my interest in sports with my interest in machine learning models and I chose combine data as my dataset as the 2026 combine was happenign when I presented my project proposal. In that original project, my group built singular models to predict player success; I specifically handled the machine learning models for the Quarterback position as Lamar Jackson is my favorite player.
 
