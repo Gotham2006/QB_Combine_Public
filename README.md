@@ -30,18 +30,34 @@ To account for non-linear relationships, I implemented a Random Forest model. Th
 
 I utilized Gradient Boosting to improve prediction accuracy through sequential error correction. This model was particularly valuable for handling the high variance inherent in sports data; by focusing on "difficult-to-classify" prospects in previous iterations, it provided a more refined look at players who might lack "prototypical" size but possess elite speed or agility.
 
+## Limitations and Constraints
 
-## Conclusions & Takeaways
+1. Sample Size (N=37): With an extremely small sample size of only 37 players, my models predictions cannot claim to have great statistical significance. It also makes outliers more statistcally significant then they shoudl be unless they are true freaks of nature like Lamar Jackson or Jayden Daniels (40-Yard dashes).
 
-![Overall 2026 Draft Class Average Hybrid Score](assets/Overall_Draft_Grades.png)
+2. PFF grades: Well PFF grades are a good choice for my models as they provide me a singular value, it is not all encompassing and is not a perfect representation of their value.
+   
+## Takeaways
 
-Based on the final evaluation, the Minnesota Vikings walked away with the best overall draft class among the teams I tracked, scoring an average Hybrid Score of 1.960 per drafted player. This was heavily anchored by their high-upside defensive line picks.
+1. The "Speed" Signal is King
+   Across all models, the 40-yard dash emerged as the most critical predictor. In the Gradient Boosting model, it accounted for over 35% of the feature importance. The negative coefficient in the Lasso Logit model            indicates that lower 40-yard dash times (faster players) are significantly associated with a higher probability of being an above-median PFF performer.
+   
+2. Explosiveness vs. Static Size
+   Interestingly, Broad Jump was consistently the second or third most important metric.In the OLS model, Broad Jump had the highest positive coefficient (7.53), suggesting that lower-body explosiveness is a more reliable    predictor than simple height or weight.Static size (Height/Weight) showed low importance or even negative correlations, hinting that the "traditional pocket passer" archetype is being outperformed by more athletic,        mobile prospects in the modern era.
+  
+3. Model Performance & Stability
+   Gradient Boosting was the superior model, achieving a 70.7% cross-validation accuracy. It also proved to be the most stable, with the lowest standard deviation (0.15) compared to the Logit model (0.28). Lasso              Regularization successfully reduced noise by isolating Broad Jump, Weight, and the 40-yard dash as the primary drivers of success, effectively "zeroing out" less impactful metrics like the Shuttle run or 3-Cone drill      for the classification task.
+   
+## Conclusion
 
-Building an A/B ensemble taught me how to effectively balance algorithmic strengths. I used a Support Vector Machine as a stable, linear baseline, pairing it with a Random Forest Regressor to capture complex, non-linear trait intersections like size-adjusted speed. Blending these models into a single Hybrid Score ultimately mitigated their individual blind spots and produced a much more reliable evaluation than any single algorithm could achieve.
+The analysis reveals a clear shift in what physical traits correlate with modern NFL quarterback success. While traditional scouting often emphasizes "stature," the data suggests that explosiveness and mobility are much stronger signals for early-career performance.
 
-This project was a major learning experience for me in a few ways:
-1. **Modular Python:** I learned how to properly separate concerns. Moving data cleaning, model training, and orchestration into their own isolated scripts (data_cleaner.py, predictor.py, team_grader.py) makes the code infinitely easier to debug and scale.
-2. **Handling Missing Data:** I built strict drop logic. If a player was not invited to the Combine or did not run the required drills, the pipeline refuses to hallucinate dummy stats to score them. This maintains mathematical integrity and explains why a few late-round picks are missing from the final outputs.
-3. **Advanced ML Techniques:** Upgrading from basic linear regressions to an ensemble method utilizing Random Forests and OHE drastically improved the model's ability to evaluate complex, real-world data.
+The largest correlations occurred for the Broad Jump and 40-yard dash. This aligns with the modern NFL’s shift toward mobile quarterbacks, where the 40-yard dash measures speed and scramble potential; Broad Jump serves as a proxy for lower-body explosiveness, the source of arm strength.
 
-## How to Use & Repurpose This Repo
+## How to Use & Repurpose This Repository
+
+1. Fork the repository
+2. cd "QB Combine"
+3. Run Data_Cleaning/QB_Combine_Data_generator.ipynb
+4. Run QB_Plot_Generator.ipynb
+5. Run QB_ML_Model
+6. All the results are in their respective folder.
