@@ -8,7 +8,7 @@ I wanted to take those early concepts and upgrade them into a proper, object-ori
 
 ## The Methods
 
-![Plot](QB%20Combine/Plots/qb_Broad_Jump_Inches.png)
+![Plot](QB%20Combine/Plots/qb_Broad_Jump_inches.png)
 
 ### ETL Pipeline
 
