@@ -6,9 +6,9 @@ I initally started this project for my CMSE 202 class at Michigan State Universi
 
 I wanted to take those early concepts and upgrade them into a proper, object-oriented enterprise machine learning pipeline. I wanted to finish what I started. This program ingests historical NFL Combine data (2016–2021), trains an ensemble of models on raw athletic traits, to see what combine factors had the greatest correlation.
 
-## The Methods
-
 ![Plot](QB%20Combine/Plots/qb_Broad_Jump_inches.png)
+
+## The Methods
 
 ### ETL Pipeline
 
