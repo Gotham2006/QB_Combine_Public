@@ -1,6 +1,6 @@
 # Predicting NFL QB Success: Machine Learning Insights from Combine Data (2016–2021)
 
-![Motivation](QB_Combine/Plots/NFL_Scouting_Combine_logo.svg)
+![Motivation](QB Combine/Plots/NFL_Scouting_Combine_logo.svg)
 
 This project is a massive architectural evolution of a final project I originally completed for CMSE 202 at Michigan State University. In that original project, my group built fragmented Jupyter notebooks to predict player success; I specifically handled the machine learning models for the Tight End position. 
 
