@@ -14,14 +14,18 @@ I first created an ELT pipeline for my machine learning models. I scoured the in
 
 ### OLS Regression 
 
-I began by implementing OLS (Ordinary Least Squares) to analyze the linear relationship between athletic traits and raw PFF scores. To refine my feature set and prevent overfitting on a smaller sample size, I applied Lasso Regression. By using L1 Regularization, the model automatically performed feature selection by shrinking the coefficients of less impactful variables to zero. 
+I began by implementing OLS (Ordinary Least Squares) to analyze the linear relationship between athletic traits and raw PFF scores. This was what I did for my initial project. 
 
 ### Logistic Regression 
 
-Using the optimized features identified by Lasso, I implemented Logistic Regression to transform the analysis into a classification task. By splitting the QBs into "Above Median" and "Below Median" performance tiers, the model calculated the specific probability of a prospect’s transition to the NFL being successful based on their refined athletic profile.
+I then created a Logistic Regression Model to see if there were features that could help predict the difference between above and below median QB's. I then used StandardScaler, followed by Lasso to identify optimized features. I implemented Logistic Regression to transform the analysis into a classification task. By splitting the QBs into "Above Median" and "Below Median" performance tiers, the model calculated the specific probability of a prospect’s transition to the NFL being successful based on their refined athletic profile and helped identify if there was any collinearity.
 
+### Random Forest Classifier
 
+To account for non-linear relationships, I implemented a Random Forest model. This approach allowed me to rank Feature Importance and provide stability, revealing which specific physical tools carried the most weight in predicting professional success. 
 
+### Gradient Boosting
+I utilized Gradient Boosting to improve prediction accuracy through sequential error correction. This model was particularly valuable for handling the high variance inherent in sports data; by focusing on "difficult-to-classify" prospects in previous iterations, it provided a more refined look at players who might lack "prototypical" size but possess elite speed or agility.
 
 
 ## Conclusions & Takeaways
