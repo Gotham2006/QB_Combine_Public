@@ -1,6 +1,6 @@
 # Predicting NFL QB Success: Machine Learning Insights from Combine Data (2016–2021)
 
-![Motivation](QB%20Combine/Plots/NFL_Scouting_Combine_logo.svg)
+![Combine Picture](QB%20Combine/Plots/NFL_Scouting_Combine_logo.svg)
 
 I initally started this project for my CMSE 202 class at Michigan State University. I wanted to combine my interest in sports with my interest in machine learning models and I chose combine data as my dataset as the 2026 combine was happenign when I presented my project proposal. In that original project, my group built singular models to predict player success; I specifically handled the machine learning models for the Quarterback position as Lamar Jackson is my favorite player.
 
@@ -25,6 +25,7 @@ I then created a Logistic Regression Model to see if there were features that co
 To account for non-linear relationships, I implemented a Random Forest model. This approach allowed me to rank Feature Importance and provide stability, revealing which specific physical tools carried the most weight in predicting professional success. 
 
 ### Gradient Boosting
+
 I utilized Gradient Boosting to improve prediction accuracy through sequential error correction. This model was particularly valuable for handling the high variance inherent in sports data; by focusing on "difficult-to-classify" prospects in previous iterations, it provided a more refined look at players who might lack "prototypical" size but possess elite speed or agility.
 
 
