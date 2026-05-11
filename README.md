@@ -2,17 +2,27 @@
 
 ![Motivation](QB%20Combine/Plots/NFL_Scouting_Combine_logo.svg)
 
-This project is a massive architectural evolution of a final project I originally completed for CMSE 202 at Michigan State University. In that original project, my group built fragmented Jupyter notebooks to predict player success; I specifically handled the machine learning models for the Tight End position. 
+I initally started this project for my CMSE 202 class at Michigan State University. I wanted to combine my interest in sports with my interest in machine learning models and I chose combine data as my dataset as the 2026 combine was happenign when I presented my project proposal. In that original project, my group built singular models to predict player success; I specifically handled the machine learning models for the Quarterback position as Lamar Jackson is my favorite player.
 
-I wanted to take those early concepts and upgrade them into a proper, object-oriented enterprise machine learning pipeline. This program ingests historical NFL Combine data (2021–2025), trains an ensemble of models on raw athletic traits, and scores the 2026 NFL Draft class. I specifically targeted the NFC North (since I am a Chicago Bears fan), the Baltimore Ravens, the Indianapolis Colts, and the Buffalo Bills (the latter 3 of which are the favorite teams of my friends).
+I wanted to take those early concepts and upgrade them into a proper, object-oriented enterprise machine learning pipeline. I wanted to finish what I started. This program ingests historical NFL Combine data (2016–2021), trains an ensemble of models on raw athletic traits, to see what combine factors had the greatest correlation.
 
-## The Tech Stack & Architecture
+## The Methods
 
-Moving from Jupyter notebooks to a modular Python pipeline meant making some big architectural shifts. You can find all of the original code under the folder "cmse202_legacy", where I worked on the Tight End portions. Here is the logic behind the code:
+### ETL Pipeline
 
-* **One-Hot Encoding (The Master Model):** In my original project, we built separate "micro-models" for every single position. That was an overfitting nightmare and computationally expensive. By using One-Hot Encoding (OHE) on the Pos column, I was able to build a single master model that evaluates over 1,700 players simultaneously while still dynamically adjusting its mathematical expectations based on what position a prospect plays.
-* **The A/B Ensemble Test (SVM vs. Random Forest):** To honor the legacy of the original project, I kept the Support Vector Machine (SVM) as a baseline since it requires perfectly scaled data and handles linear boundaries well. I paired it head-to-head with a Random Forest Regressor, which is a much more advanced engine for handling complex, non-linear trait intersections like size-adjusted speed. The final grade for a player is a blended Hybrid Success Score of both models.
-* **Strict Feature Whitelisting:** The models are mathematically locked down to only look at pre-draft athletic traits (Height, Weight, 40yd dash, Jumps) and the OHE positional columns. This prevents target leakage, ensuring the model cannot cheat by accidentally looking at post-draft NFL stats or college names during training.
+I first created an ELT pipeline for my machine learning models. I scoured the internet for free combine data and then used a python script to remove datasets which did not contain players that had played atleast 4 years in the NFL. I then further transforemed the data by finding the PFF score of the QB's who filled the required threshold and then removed players who did not have statistically significant PFF scores.
+
+### OLS Regression 
+
+I began by implementing OLS (Ordinary Least Squares) to analyze the linear relationship between athletic traits and raw PFF scores. To refine my feature set and prevent overfitting on a smaller sample size, I applied Lasso Regression. By using L1 Regularization, the model automatically performed feature selection by shrinking the coefficients of less impactful variables to zero. 
+
+### Logistic Regression 
+
+Using the optimized features identified by Lasso, I implemented Logistic Regression to transform the analysis into a classification task. By splitting the QBs into "Above Median" and "Below Median" performance tiers, the model calculated the specific probability of a prospect’s transition to the NFL being successful based on their refined athletic profile.
+
+
+
+
 
 ## Conclusions & Takeaways
 
