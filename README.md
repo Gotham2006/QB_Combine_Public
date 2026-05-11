@@ -10,7 +10,7 @@ I wanted to take those early concepts and upgrade them into a proper, object-ori
 
 ## The Methods
 
-### ETL Pipeline
+### ELT Pipeline
 
 I first created an ELT pipeline for my machine learning models. I scoured the internet for free combine data and then used a python script to remove datasets which did not contain players that had played atleast 4 years in the NFL. I then further transforemed the data by finding the PFF score of the QB's who filled the required threshold and then removed players who did not have statistically significant PFF scores.
 
