@@ -55,7 +55,7 @@ The largest correlations occurred for the Broad Jump and 40-yard dash. This alig
 
 The greatest example of this (Glaze)
 
-![THE GOAT](QB%20Combine/Plots/Lamar_Jackson.jpg)
+![THE GOAT](QB%20Combine/Plots/Lamar_Jackson_Ravens.webp)
 
 ## How to Use & Repurpose This Repository
 
