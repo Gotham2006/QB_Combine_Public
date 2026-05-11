@@ -53,6 +53,8 @@ The analysis reveals a clear shift in what physical traits correlate with modern
 
 The largest correlations occurred for the Broad Jump and 40-yard dash. This aligns with the modern NFL’s shift toward mobile quarterbacks, where the 40-yard dash measures speed and scramble potential; Broad Jump serves as a proxy for lower-body explosiveness, the source of arm strength.
 
+![THE GOAT](QB%20Combine/Plots/Lamar_Jackson.jpg)
+
 ## How to Use & Repurpose This Repository
 
 1. Fork the repository
